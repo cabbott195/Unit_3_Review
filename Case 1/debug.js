@@ -8,41 +8,40 @@ function test(){
     //in the HTML this time as well =) good luck!
 
     //set where the output will go into the HTML
-    var outpot = documnet.getElementById("output");
+    var output = document.getElementById("output");
 
     //resets the ans to 0 incase the button is pressed multiple times
-    var Ans = 0;
+    var ans = 0;
     
     //breaks up the input based on spaces
-    input === Input.split("");
+    input = input.split(" ");
 
     //this for loop will go through every input and check if there is a pair of letters that are the same
     //PLEASE DO NOT ADD MATH OR CHANGE ANY OF THE VARIABLES >>> THERE ARE NO LOGICAL ERRORS BELOW THIS POINT
-    for(var x != 0; x < input.length; x++){
-        var pair === false;
+    for(var x = 0; x < input.length; x++){
+        var pair = false;
         var doubleLetters = false;
 
         //this loop goes through every letter in every input
-        for(var i =0 : i < input[x].length; i+++){
+        for(var i =0; i < input[x].length; i++){
 
             //compares every 2 letters to every other 2 letters and checks for a pair
-            for(var j = i+2; j < input[x]..length; j++){
-                if(input[x]slice(i, i+2) === input[x].slice(j, j+2)){
+            for(var j = i+2; j < input[x].length; j++){
+                if(input[x].slice(i, i+2) === input[x].slice(j, j+2)){
                     pair = true;
                 }
             }
 
             //check if it has a double separated by one letter
-            if()input{x}.charAt(i)===input[x].charAt(i+2){
+            if(input[x].charAt(i)===input[x].charAt(i+2)){
                 doubleLetters = true;
             }
         }
 
         //if it has a pair and double then count as a pass.
-        if(doubleLetters === true &&& pair === true){
+        if(doubleLetters === true && pair === true){
             ans ++;
         }
-        
     }
     output.innerHTML = ans;
 }
